@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Laundry Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <main>
+        <div class="nav-container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#cart">Cart</a>
+                <a href="#wishlist">Wishlist</a>
+                <button id="sign-up">Sign up</button>
+            </nav>
+        </div>
+        <div class="settings-wrapper">
+            <div class="settings-box">
+                <h2>Settings</h2>
+                <form action="#" method="post">
+                    <div class="option">
+                        <input type="checkbox" id="marketing-emails" name="marketing-emails">
+                        <label for="marketing-emails">Receive marketing emails</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="sale-notifications" name="sale-notifications">
+                        <label for="sale-notifications">Notify me when an item in my wishlist is on sale</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="auto-subscription" name="auto-subscription">
+                        <label for="auto-subscription">Activate auto subscription</label>
+                    </div>
+                    <button type="submit" class="save-settings">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="footer-container">
+        <!-- Footer content can go here -->
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

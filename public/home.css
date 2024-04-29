@@ -1,0 +1,164 @@
+/* Reset some basic elements */
+body, h1, h2, nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    position: absolute;
+    right: 0%;
+    padding-right: 20px;
+}
+
+.title-container {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #cfe8f1;
+    font-family: Arial, sans-serif;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#sign-up {
+    padding: 5px 15px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.services {
+    position: relative;
+    margin-top: 100px; /* Adjust as necessary */
+    background-color: #A9A9A9; /* Dark Gray */
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 100%; /* Adjust as necessary */
+    height: 300px; /* Adjust as necessary */
+    text-align: center;
+    overflow: hidden; /* Ensures nothing spills out the bottom half */
+}
+
+.half-circle {
+    position: relative;
+    top: -30%; /* Position */
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+}
+
+.services h2 {
+    position: absolute;
+    top: 4%; /* Adjust as necessary */
+    width: 100%;
+}
+
+.service-item {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px 30px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Set position to relative for absolute positioning of child elements */
+    padding-top: 20px; /* Add padding to push content to the bottom of the circle */
+}
+
+.icon {
+    margin-bottom: 10px; /* Space between icon and text */
+    position: absolute;
+    top: 10px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering due to width */
+}
+
+.icon img {
+    width: 40px; /* Set width of icon */
+    height: 40px; /* Set height of icon */
+}
+
+.service-text {
+    display: block;
+    position: absolute;
+    bottom: 10px; /* Position from the bottom */
+    width: 100%; /* Full width to center text */
+    text-align: center;
+}
+
+.service-item span {
+    display: block; /* Ensure the text takes up the full width available */
+}
+
+/* Adjust the container */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the container */
+    height: 100%; /* Take the full height of the parent */
+    padding-top: 50px; /* Adjust space from the top as necessary */
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    height: 30%;
+    background-color: #FFE9C8;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.middle-shirt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .behind-content {
+    position: fixed;
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the element by its own dimensions */
+    z-index: -999;
+    width: 650px;
+    height: 650px;
+  }
+
+  .behind-content-left {
+    position: fixed;
+    top: 30%; /* Center vertically */
+    left: 30%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the element by its own dimensions */
+    z-index: -997;
+    width: 450px;
+    height: 450px;
+  }
+  .behind-content-left {
+    position: fixed;
+    top: 30%; /* Center vertically */
+    left: 80%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the element by its own dimensions */
+    z-index: -997;
+    width: 450px;
+    height: 450px;
+  }
+  

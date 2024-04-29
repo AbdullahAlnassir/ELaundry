@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Laundry Address Entry</title>
+    <link rel="stylesheet" href="addressDetails.css">
+</head>
+<body>
+    <main>
+        <div class="nav-container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#cart">Cart</a>
+                <a href="#wishlist">Wishlist</a>
+                <button id="sign-up">Sign up</button>
+            </nav>
+        </div>
+        <div class="address-wrapper">
+            <div class="address-box">
+                <h2>Enter Address Details</h2>
+                <form action="#" method="post">
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="street" placeholder="Enter street address"><br>
+        
+                    <label for="district">District</label>
+                    <input type="text" id="district" name="district" placeholder="Enter district"><br>
+        
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter city"><br>
+        
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Enter country"><br>
+
+                    <label for="delivery-type">Delivery Type</label>
+                    <select id="delivery-type" name="delivery-type">
+                        <option value="pickup">Pick Up</option>
+                        <option value="delivery">Delivery</option>
+                    </select><br>
+        
+                    <label for="delivery-time">Delivery/Pick Up Time</label>
+                    <input type="time" id="delivery-time" name="delivery-time"><br>
+        
+                    <label for="delivery-date">Delivery/Pick Up Date</label>
+                    <input type="date" id="delivery-date" name="delivery-date"><br>
+        
+                    <button type="submit" class="checkout-button">Checkout</button>
+                </form>
+            </div>
+        </div>               
+    </main>
+    <div class="footer-container">
+        <!-- Footer content can go here -->
+    </div>
+    <script src="addressDetails.js"></script>
+</body>
+</html>

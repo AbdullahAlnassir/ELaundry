@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Laundry Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <main>
+        <div class="nav-container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#cart">Cart</a>
+                <a href="#wishlist">Wishlist</a>
+                <button id="sign-up">Sign up</button>
+            </nav>
+        </div>
+        <div class="dashboard-wrapper">
+            <div class="dashboard-box">
+                <h2>Customer List</h2>
+                <table class="dashboard-info">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Phone Number</th>
+                            <th>Credit Card Number</th>
+                            <th>Account Password</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-data">
+                        <!-- Customer data rows will be inserted here -->
+                    </tbody>
+                </table>
+                <p id="copy-error" style="color: red; display: none;">Due to how we value customer privacy, we cannot let you copy these details.</p>
+            </div>
+        </div>
+    </main>
+    <div class="footer-container">
+        <!-- Footer content can go here -->
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

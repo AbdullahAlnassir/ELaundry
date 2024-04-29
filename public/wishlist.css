@@ -1,0 +1,110 @@
+/* Reset some basic elements */
+body, h1, h2, nav {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Standard font for the whole page */
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#sign-up {
+    padding: 5px 15px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+main {
+    position: absolute; /* Ensures that main doesn't interfere with the flex layout of body */
+    top: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #FFE9C8;
+    color: black;
+    padding: 10px;
+}
+
+.wishlist-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to ensure it is above other content */
+}
+
+.wishlist-box {
+    width: 60%;
+    min-height: 40%; /* Minimum height to accommodate content */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow */
+}
+
+.wishlist-box h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.add-to-cart {
+    padding: 8px 16px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: darkviolet;
+}
