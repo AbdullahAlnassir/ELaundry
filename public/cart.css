@@ -1,17 +1,16 @@
-/* Reset some basic elements */
-body, h1, h2, nav {
+/* Basic Reset */
+body, h1, h2, nav, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Full viewport height setup */
 body, html {
-    height: 100%; /* Full viewport height */
-    margin: 0;
-    padding: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
 }
 
 .nav-container {
@@ -70,7 +69,7 @@ main {
     min-height: 40%;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -85,7 +84,7 @@ main {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px; /* Space for the button below */
+    margin-bottom: 20px;
 }
 
 th, td {
@@ -98,14 +97,17 @@ th {
     background-color: #f2f2f2;
 }
 
-.checkout-button {
+.checkout-button, .checkout-button:hover {
     padding: 10px 20px;
-    background-color: green;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.checkout-button {
+    background-color: green;
+    color: white;
 }
 
 .checkout-button:hover {

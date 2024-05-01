@@ -1,27 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var loginForm = document.querySelector('form');
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        document.getElementById('otp-modal').style.display = 'flex';
-    });
+function submitLoginForm() {
+    event.preventDefault();
 
-    document.getElementById('otp-submit').addEventListener('click', function() {
-        var otp = document.getElementById('otp-input').value;
-        var errorText = document.getElementById('otp-error');
+    let formData = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
+    };
 
-        if (otp === '0000') {
-            window.location.href = 'dashboard.html'; // Redirect to dashboard
-        } else if (otp === '1111') {
-            window.location.href = 'cart.html'; // Redirect to cart page
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Login successful:', data.message);
+            window.location.href = '/dashboard';
         } else {
-            errorText.style.display = 'block';
+            alert('Login failed: ' + data.message);
         }
+    })
+    .catch((error) => {
+        console.error('Error during login:', error);
+        alert('An error occurred during login.');
     });
-
-    // Handling the Cancel button click
-    document.getElementById('otp-cancel').addEventListener('click', function() {
-        document.getElementById('otp-modal').style.display = 'none'; // Hide the modal
-        document.getElementById('otp-input').value = ''; // Reset OTP input
-        document.getElementById('otp-error').style.display = 'none'; // Hide error message if visible
-    });
-});
+}

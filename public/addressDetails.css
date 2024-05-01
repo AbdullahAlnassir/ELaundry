@@ -1,13 +1,11 @@
-/* Reset some basic elements */
+/* Basic Resets */
 body, h1, h2, nav {
     margin: 0;
     padding: 0;
 }
 
 body, html {
-    height: 100%; /* Full viewport height */
-    margin: 0;
-    padding: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,13 +44,11 @@ main {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 30%;
     background-color: #FFE9C8;
-    color: black;
     padding: 10px;
 }
 
-.cart-wrapper {
+.cart-wrapper, .address-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,27 +61,20 @@ main {
     z-index: 1000;
 }
 
-.cart-box {
+.cart-box, .address-box {
     width: 40%;
-    min-height: 40%;
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cart-box h2 {
-    margin-bottom: 20px;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px; /* Space for the button below */
 }
 
 th, td {
@@ -98,70 +87,26 @@ th {
     background-color: #f2f2f2;
 }
 
-.checkout-button {
+.checkout-button, .save-settings {
     padding: 10px 20px;
     background-color: green;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 50%;
+    align-self: flex-end;
+    transition: background-color 0.3s;
 }
 
-.checkout-button:hover {
+.checkout-button:hover, .save-settings:hover {
     background-color: darkgreen;
-}
-
-.address-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.address-box {
-    width: 40%;
-    min-height: auto; /* Adjust based on content */
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto; /* Allow scrolling if needed */
-}
-
-.address-box form {
-    width: 100%;
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="time"], input[type="date"], select {
-    width: 90%; /* Responsive width */
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded edges */
-}
-
-.checkout-button {
-    width: 50%;
-    padding: 10px;
-    background-color: green;
-    color: white;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: flex-end; /* Position button to the right */
-}
-
-.checkout-button:hover {
-    background-color: darkgreen;
 }

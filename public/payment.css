@@ -1,24 +1,23 @@
-/* Reset some basic elements */
-body, h1, h2, nav {
+/* Basic Reset */
+body, h1, h2, nav, html {
     margin: 0;
     padding: 0;
-}
-
-body, html {
-    height: 100%; /* Full viewport height */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
 }
 
+/* Full viewport height setup */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation */
 .nav-container {
     position: absolute;
     top: 0;
-    right: 0;
-    padding-right: 20px;
+    right: 20px;
 }
 
 nav a {
@@ -31,10 +30,10 @@ nav a {
     padding: 5px 15px;
     background-color: purple;
     color: white;
-    border: none;
     border-radius: 5px;
 }
 
+/* Main content */
 main {
     position: absolute;
     top: 20px;
@@ -48,10 +47,10 @@ main {
     width: 100%;
     height: 30%;
     background-color: #FFE9C8;
-    color: black;
     padding: 10px;
 }
 
+/* Payment modal */
 .payment-wrapper {
     display: flex;
     justify-content: center;
@@ -70,7 +69,7 @@ main {
     min-height: auto;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -79,10 +78,6 @@ main {
 
 .payment-box h2 {
     margin-bottom: 20px;
-}
-
-.payment-box form {
-    width: 100%;
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="time"], input[type="date"], select {
@@ -98,10 +93,9 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tim
     padding: 10px;
     background-color: green;
     color: white;
-    border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
     align-self: flex-end;
 }
 

@@ -21,7 +21,7 @@
         <div class="payment-wrapper">
             <div class="payment-box">
                 <h2>Payment Details</h2>
-                <form action="#" method="post">
+                <form id="paymentForm">
                     <label for="cardholder">Cardholder Name:</label>
                     <input type="text" id="cardholder" name="cardholder" placeholder="Cardholder Name"><br>
 
@@ -37,13 +37,12 @@
                     <label for="cvv">CVV:</label><br>
                     <input type="text" id="cvv" name="cvv" placeholder="CVV">
 
-                    <button type="submit" class="checkout-button">Submit Payment</button>
+                    <button type="button" class="checkout-button" onclick="submitPayment()">Submit Payment</button>
                 </form>
             </div>
         </div>
     </main>
     <div class="footer-container">
-        <!-- Footer content can go here -->
     </div>
     <script src="payment.js"></script>
 </body>

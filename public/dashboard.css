@@ -1,19 +1,19 @@
-/* Reset some basic elements */
-body, h1, h2, nav {
+/* Basic styling reset */
+body, h1, h2, nav, html {
     margin: 0;
     padding: 0;
-}
-
-body, html {
-    height: 100%; /* Full viewport height */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
 }
 
+/* Full viewport height and center alignment */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation styling */
 .nav-container {
     position: absolute;
     top: 0;
@@ -35,6 +35,7 @@ nav a {
     border-radius: 5px;
 }
 
+/* Main content area */
 main {
     position: absolute;
     top: 20px;
@@ -52,7 +53,8 @@ main {
     padding: 10px;
 }
 
-.cart-wrapper {
+/* Modal-like wrapper for cart and dashboard */
+.cart-wrapper, .dashboard-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,39 +67,38 @@ main {
     z-index: 1000;
 }
 
-.cart-box {
-    width: 40%;
-    min-height: 40%;
+/* Cart and dashboard box styling */
+.cart-box, .dashboard-box {
     background-color: white;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cart-box h2 {
+.cart-box, .dashboard-box h2 {
     margin-bottom: 20px;
 }
 
-table {
+/* Table styling common to cart and dashboard */
+table, .dashboard-info {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px; /* Space for the button below */
 }
 
-th, td {
+th, td, .dashboard-info th, .dashboard-info td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-th {
+th, .dashboard-info th {
     background-color: #f2f2f2;
 }
 
+/* Button styling for checkout */
 .checkout-button {
     padding: 10px 20px;
     background-color: green;
@@ -110,48 +111,4 @@ th {
 
 .checkout-button:hover {
     background-color: darkgreen;
-}
-
-.dashboard-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.dashboard-box {
-    width: 60%;
-    min-height: auto;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dashboard-box h2 {
-    margin-bottom: 20px;
-}
-
-.dashboard-info {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.dashboard-info th, .dashboard-info td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-}
-
-.dashboard-info th {
-    /* background-color: #f2f2f2; */
 }
